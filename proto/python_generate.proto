@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package automation;
+
+
+message TestRequestPython {
+    string name_python = 1;
+    int32 id_python = 2;
+}
+
+message TestResponsePython {
+    string message_python = 1;
+    bool success_python = 2;
+}
+
+service TestServicePython {
+    rpc TestMethodPython (TestRequestPython) returns (TestResponsePython);
+}
