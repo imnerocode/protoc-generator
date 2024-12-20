@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package automation;
+
+option csharp_namespace = "/;automation";
+
+message TestRequestCsharp {
+    string name_csharp = 1;
+    int32 id_csharp = 2;
+}
+
+message TestResponseCsharp {
+    string message_csharp = 1;
+    bool success_csharp = 2;
+}
+
+service TestServiceCsharp {
+    rpc TestMethodCsharp (TestRequestCsharp) returns (TestResponseCsharp);
+}
